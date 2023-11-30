@@ -1,0 +1,28 @@
+//fonction
+FUNCTION dot_product(x,y) : INTEGER
+VAR
+    i,j:INTEGER;
+BEGIN
+    FOR i FROM 0 TO x.length-1 STEP 1  DO
+        ps=ps+x[i]*y[i]
+    END_FOR
+    RETURN ps ;
+END
+//algo
+ALGORITHM dot_product
+VAR
+    i,j:INTEGER;
+BEGIN
+    Write("Donnez la dimension du vecteur")
+    Read(n)
+    FOR i FROM 0 TO n STEP 1  DO
+        Write("Donnez les éléments du vecteur x a la position",i)
+        Read(x[i])
+        Write("Donnez les éléments du vecteur y a la position",i)
+        Read(y[i])
+
+    END_FOR
+    IF (dot_product (x,y) ===0) THEN
+        Write("Ces deux vecteurs sont orthogonaux")
+    END_IF
+END

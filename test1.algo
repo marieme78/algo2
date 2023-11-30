@@ -1,0 +1,22 @@
+// Algorithme de tri à bulle
+ALGORITHM triàbulle
+VAR
+    tab: ARRAY_OF INTEGER[10];
+    i, j, tmp, result: INTEGER;
+BEGIN
+    tab := [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+    result := 0;
+
+    FOR i FROM 0 TO tab.length - 1 DO
+        FOR j FROM 0 TO tab.length - i - 2 DO    
+            IF tab[j] > tab[j + 1] THEN
+                tmp := tab[j];
+                tab[j] := tab[j + 1];
+                tab[j + 1] := tmp;
+            END_IF;
+        END_FOR;
+    END_FOR;
+
+    Write(tab);
+    Write(result);
+END
